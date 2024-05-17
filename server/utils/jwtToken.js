@@ -1,5 +1,5 @@
 const sendToken = (user, statusCode, res) => {
-  console.log("HItoken");
+  // console.log("HItoken");
   const token = user.getJWTToken();
   // option for cookie
   const options = {
