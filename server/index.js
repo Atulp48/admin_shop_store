@@ -67,8 +67,7 @@ app.get("*", (req, res) => {
 // app.get('/', (req, res) => res.json({ message: 'Welcome to our API' }))
 app.use((req, res) => res.status(404).json({ success: false, message: 'Not Found' }))
 
-const url = `mongodb+srv://${process.env.MONGO_NAME}:${process.env.MONGO_PASS}@cluster0.sz1ae71.mongodb.net/?retryWrites=true&w=majority`
-connectDatabase(url)
+connectDatabase()
 
 cloundinary.config({
     cloud_name: process.env.CLOUDINARY_NAME,
